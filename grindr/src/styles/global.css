@@ -1,0 +1,35 @@
+@import './_variables.module.css'; /* Import variables */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font */
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  margin-bottom: 0.5em;
+}
+
+/* Container for centering content */
+.container {
+  max-width: var(--breakpoint-lg); /* Or a fixed max-width like 1200px */
+  margin: 0 auto;
+  padding: 1rem;
+}

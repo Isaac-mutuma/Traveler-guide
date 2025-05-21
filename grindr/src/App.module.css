@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+.container {
+  max-width: var(--breakpoint-lg);
+  margin: 0 auto;
+  padding: 0 1rem;
+}

@@ -1,0 +1,33 @@
+@import '../../styles/_variables.module.css';
+
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--breakpoint-lg);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo .logoLink {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+@media (max-width: calc(var(--breakpoint-md) - 1px)) {
+  .header {
+    padding: 1rem 0;
+  }
+  .logo .logoLink {
+    font-size: 1.8rem;
+  }
+}

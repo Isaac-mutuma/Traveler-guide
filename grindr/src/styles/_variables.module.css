@@ -1,0 +1,13 @@
+:root {
+  --color-primary: #2D5D4E;
+  --color-secondary: #A0D9B1;
+  --color-accent: #FF7F50;
+  --color-text: #333333;
+  --color-background: #F9F9F9;
+  --color-white: #FFFFFF;
+
+  /* Breakpoints */
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1200px; /* Adjust based on mockup LG breakpoint */
+}
