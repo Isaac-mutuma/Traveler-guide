@@ -4,7 +4,6 @@
 
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Screenshots](#screenshots)
 - [Tech Stack](#tech-stack)
 - [Folder Structure](#folder-structure)
 - [Getting Started](#getting-started)
