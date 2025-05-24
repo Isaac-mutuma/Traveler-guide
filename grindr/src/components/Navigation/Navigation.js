@@ -1,26 +1,47 @@
 import React, { useState } from 'react';
 import styles from './Navigation.module.css';
 
-const Navigation = () => {
+const navItems = [
+  { name: 'Home' },
+  { name: 'Products' },
+  { name: 'About Us' },
+  { name: 'Contact' },
+  { name: 'Blog' },
+];
+
+const Navigation = ({ setPage, currentPage }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const handleNav = (name, e) => {
+    e.preventDefault();
+    setPage(name);
+    setIsOpen(false);
+    window.scrollTo(0, 0);
   };
 
   return (
     <nav className={styles.nav}>
-      <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle navigation">
+      <button className={styles.hamburger} onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation">
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
       </button>
       <ul className={`${styles.navList} ${isOpen ? styles.navListOpen : ''}`}>
-        <li><a href="#" className={styles.navLink}>Home</a></li>
-        <li><a href="#" className={styles.navLink}>Products</a></li>
-        <li><a href="#" className={styles.navLink}>About Us</a></li>
-        <li><a href="#" className={styles.navLink}>Contact</a></li>
-        <li><a href="#" className={styles.navLink}>Blog</a></li>
+        {navItems.map(item => (
+          <li key={item.name}>
+            <a
+              href="#"
+              className={styles.navLink}
+              style={{
+                color: currentPage === item.name ? 'var(--color-secondary)' : undefined,
+                fontWeight: currentPage === item.name ? 'bold' : undefined,
+              }}
+              onClick={e => handleNav(item.name, e)}
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
